@@ -1,0 +1,17 @@
+src/about.c
+src/lk.c
+src/lkdb.c
+src/lkprint.c
+src/lksc.c
+src/lkwindow.c
+src/main.c
+src/mainwindow.c
+src/sd.c
+src/sddb.c
+src/sdprint.c
+src/sdsc.c
+src/sdwindow.c
+glade/about.glade
+glade/lkwindow.glade
+glade/mainwindow.glade
+glade/sdwindow.glade

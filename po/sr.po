@@ -1,0 +1,345 @@
+# Serbian translations for cLKSD package.
+# Copyright (C) 2013 Drazen Kozic kozic.drazen@gmail.com
+# This file is distributed under the same license as the cLKSD package.
+#  <kozic.drazen@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CLKSD 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-20 20:42+0200\n"
+"PO-Revision-Date: 2013-10-17 21:49+0200\n"
+"Last-Translator:  <kozic.drazen@gmail.com>\n"
+"Language-Team: Serbian <gnu@prevod.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/lkwindow.c:221 src/sdwindow.c:221
+msgid "Read OK"
+msgstr "Читање завршено"
+
+#: src/lkwindow.c:250 src/sdwindow.c:252
+msgid "Print OK"
+msgstr "Штампа завршена"
+
+#: src/lkwindow.c:282 src/sdwindow.c:284
+#, fuzzy
+msgid "Delete OK"
+msgstr "Брисање свих слогова завршено"
+
+#: src/lkwindow.c:298 src/sdwindow.c:300
+msgid "Delete all OK"
+msgstr "Брисање свих слогова завршено"
+
+#: src/mainwindow.c:29
+msgid "Are you sure to quit?"
+msgstr "Да ли заиста желите да завршите?"
+
+#: src/mainwindow.c:30
+msgid "Question"
+msgstr "Питање"
+
+#: glade/about.glade:13
+msgid "Serbian identity card reader."
+msgstr "Читач српских личних карата"
+
+#: glade/lkwindow.glade:17 glade/mainwindow.glade:17
+msgid "IdentityCard"
+msgstr "Лична карта"
+
+#: glade/lkwindow.glade:32 glade/sdwindow.glade:60
+msgid "_File"
+msgstr ""
+
+#: glade/lkwindow.glade:42 glade/lkwindow.glade:118 glade/sdwindow.glade:70
+#: glade/sdwindow.glade:146
+msgid "Read"
+msgstr "Читање"
+
+#: glade/lkwindow.glade:79 glade/sdwindow.glade:107
+msgid "_Help"
+msgstr "Помоћ"
+
+#: glade/lkwindow.glade:135 glade/sdwindow.glade:163
+msgid "Print"
+msgstr "Штампа"
+
+#: glade/lkwindow.glade:185
+msgid "DocRegNo"
+msgstr "Регистарски број"
+
+#: glade/lkwindow.glade:198
+msgid "IssuingDate"
+msgstr "Датум издавања"
+
+#: glade/lkwindow.glade:213
+msgid "ExpiryDate"
+msgstr "Важи до"
+
+#: glade/lkwindow.glade:228
+msgid "IssuingAuthority"
+msgstr "Документ издаје"
+
+#: glade/lkwindow.glade:306 glade/sdwindow.glade:720
+msgid "<b>DocumentData</b>"
+msgstr "<b>Подаци о документу</b>"
+
+#: glade/lkwindow.glade:341
+msgid "PersonalNumber"
+msgstr "ЈМБГ"
+
+#: glade/lkwindow.glade:354 glade/lkwindow.glade:998
+msgid "Surname"
+msgstr "Презиме"
+
+#: glade/lkwindow.glade:369 glade/lkwindow.glade:1012
+msgid "GivenName"
+msgstr "Име"
+
+#: glade/lkwindow.glade:384
+msgid "ParentGivenName"
+msgstr "Име родитеља"
+
+#: glade/lkwindow.glade:399
+msgid "Sex"
+msgstr "Пол"
+
+#: glade/lkwindow.glade:414
+msgid "PlaceOfBirth"
+msgstr "Место рођења"
+
+#: glade/lkwindow.glade:429
+msgid "StateOfBirth"
+msgstr "Држава рођења"
+
+#: glade/lkwindow.glade:444
+msgid "DateOfBirth"
+msgstr "Датум рођења"
+
+#: glade/lkwindow.glade:459
+msgid "CommunityOfBirth"
+msgstr "Општина рођења"
+
+#: glade/lkwindow.glade:617
+msgid "<b>FixedPersonalData</b>"
+msgstr "<b>Фиксни лични подаци</b>"
+
+#: glade/lkwindow.glade:652
+msgid "Community"
+msgstr "Општина"
+
+#: glade/lkwindow.glade:667
+msgid "Place"
+msgstr "Место"
+
+#: glade/lkwindow.glade:682
+msgid "Street"
+msgstr "Улица"
+
+#: glade/lkwindow.glade:697
+msgid "HouseNumber"
+msgstr "Кућни број"
+
+#: glade/lkwindow.glade:712
+msgid "HouseLetter"
+msgstr "Слово"
+
+#: glade/lkwindow.glade:727
+msgid "Entrance"
+msgstr "Улаз"
+
+#: glade/lkwindow.glade:742
+msgid "Floor"
+msgstr "Спрат"
+
+#: glade/lkwindow.glade:757
+msgid "ApartmentNumber"
+msgstr "Број стана"
+
+#: glade/lkwindow.glade:920
+msgid "State"
+msgstr "Држава"
+
+#: glade/lkwindow.glade:934
+msgid "<b>VariablePersonalData</b>"
+msgstr "<b>Варијабилни лични подаци</b>"
+
+#: glade/lkwindow.glade:966
+msgid "<b>Image</b>"
+msgstr "<b>Фотографија</b>"
+
+#: glade/lkwindow.glade:1059 glade/sdwindow.glade:22
+msgid "Delete"
+msgstr "Обриши"
+
+#: glade/lkwindow.glade:1067 glade/sdwindow.glade:30
+msgid "Delete all"
+msgstr "Обриши све"
+
+#: glade/lkwindow.glade:1075 glade/sdwindow.glade:38
+msgid "Show"
+msgstr "Прикажи"
+
+#: glade/mainwindow.glade:31 glade/sdwindow.glade:45
+msgid "RegistrationCertificate"
+msgstr "Саобраћајна дозвола"
+
+#: glade/sdwindow.glade:213
+msgid "ownersPersonalNo"
+msgstr "ЈМБГ власника"
+
+#: glade/sdwindow.glade:226
+msgid "ownersSurnameOrBusinessName"
+msgstr "Власник"
+
+#: glade/sdwindow.glade:241
+msgid "ownerName"
+msgstr "Име власника"
+
+#: glade/sdwindow.glade:256
+msgid "ownerAddress"
+msgstr "Адреса власника"
+
+#: glade/sdwindow.glade:271
+msgid "usersPersonalNo"
+msgstr "ЈМБГ корисника"
+
+#: glade/sdwindow.glade:286
+msgid "usersSurnameOrBusinessName"
+msgstr "Корисник"
+
+#: glade/sdwindow.glade:301
+msgid "usersName"
+msgstr "Име корисника"
+
+#: glade/sdwindow.glade:316
+msgid "usersAddress"
+msgstr "Адреса корисника"
+
+#: glade/sdwindow.glade:466
+msgid "<b>PersonalData</b>"
+msgstr "<b>Подаци о власнику</b>"
+
+#: glade/sdwindow.glade:499
+msgid "stateIssuing"
+msgstr "Држава издавања"
+
+#: glade/sdwindow.glade:512
+msgid "competentAuthority"
+msgstr "Орган издавања 1"
+
+#: glade/sdwindow.glade:527
+msgid "authorityIssuing"
+msgstr "Орган издавања 2"
+
+#: glade/sdwindow.glade:542
+msgid "unambiguousNumber"
+msgstr "Број саобраћајне"
+
+#: glade/sdwindow.glade:557
+msgid "issuingDate"
+msgstr "Датум издавања"
+
+#: glade/sdwindow.glade:572
+msgid "expiryDate"
+msgstr "Важи до"
+
+#: glade/sdwindow.glade:587
+msgid "serialNumber"
+msgstr "Серијски број"
+
+#: glade/sdwindow.glade:755
+msgid "dateOfFirstRegistration"
+msgstr "Датум прве регистрације"
+
+#: glade/sdwindow.glade:768
+msgid "yearOfProduction"
+msgstr "Година производње"
+
+#: glade/sdwindow.glade:783
+msgid "vehicleMake"
+msgstr "Марка"
+
+#: glade/sdwindow.glade:798
+msgid "vehicleType"
+msgstr "Тип"
+
+#: glade/sdwindow.glade:813 glade/sdwindow.glade:1496
+msgid "commercialDescription"
+msgstr "Модел"
+
+#: glade/sdwindow.glade:828
+msgid "vehicleIDNumber"
+msgstr "Број шасије"
+
+#: glade/sdwindow.glade:843 glade/sdwindow.glade:1482
+msgid "registrationNumberOfVehicle"
+msgstr "Регистарска ознака"
+
+#: glade/sdwindow.glade:858
+msgid "maximumNetPower"
+msgstr "Снага мотора"
+
+#: glade/sdwindow.glade:873
+msgid "engineCapacity"
+msgstr "Запремина мотора"
+
+#: glade/sdwindow.glade:888
+msgid "typeOfFuel"
+msgstr "Погонско гориво"
+
+#: glade/sdwindow.glade:903
+msgid "powerWeightRatio"
+msgstr "Однос снага/маса"
+
+#: glade/sdwindow.glade:918
+msgid "vehicleMass"
+msgstr "Маса"
+
+#: glade/sdwindow.glade:933
+msgid "maximumPermissibleLadenMass"
+msgstr "Укупна маса"
+
+#: glade/sdwindow.glade:949
+msgid "typeApprovalNumber"
+msgstr "Хомологацијска ознака"
+
+#: glade/sdwindow.glade:964
+msgid "numberOfSeats"
+msgstr "Број места за седење"
+
+#: glade/sdwindow.glade:979
+msgid "numberOfStandingPlaces"
+msgstr "Број места за стајање"
+
+#: glade/sdwindow.glade:994
+msgid "engineIDNumber"
+msgstr "Број мотора"
+
+#: glade/sdwindow.glade:1009
+msgid "numberOfAxles"
+msgstr "Број осовина"
+
+#: glade/sdwindow.glade:1024
+msgid "vehicleCategory"
+msgstr "Категорија"
+
+#: glade/sdwindow.glade:1039
+msgid "colourOfVehicle"
+msgstr "Боја"
+
+#: glade/sdwindow.glade:1054
+msgid "restrictionToChangeOwner"
+msgstr "Забрана отуђења"
+
+#: glade/sdwindow.glade:1069
+msgid "vehicleLoad"
+msgstr "Носивост"
+
+#: glade/sdwindow.glade:1447
+msgid "<b>VehicleData</b>"
+msgstr "<b>Подаци о возилу</b>"

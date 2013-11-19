@@ -1,0 +1,14 @@
+xgettext --add-comments=/ -o ./po/clksd.pot --keyword=_ -f./po/POTFILES.in
+
+msginit -lsr -i./po/clksd.pot -o./po/sr.po
+msginit -lsr -i./po/clksd.pot -o./po/sr@latin.po
+msginit -lsr -i./po/clksd.pot -o./po/en.po
+
+msgfmt -o locale/sr/LC_MESSAGES/clksd.mo ./po/sr.po
+msgfmt -o locale/sr@latin/LC_MESSAGES/clksd.mo ./po/sr@latin.po
+msgfmt -o locale/en/LC_MESSAGES/clksd.mo ./po/en.po
+
+msgmerge --update po/sr.po po/clksd.pot
+msgmerge --update po/sr@latin.po po/clksd.pot
+msgmerge --update po/en.po po/clksd.pot
+

@@ -1,0 +1,24 @@
+#ifndef SDSC_H
+#define	SDSC_H
+
+#define CLKSD_SDSC_ERROR (clksd_sdsc_error_quark())
+
+enum
+{
+    CLKSD_SDSC_ERROR_STARTUP,
+    CLKSD_SDSC_ERROR_GET_READER_NAME,
+    CLKSD_SDSC_ERROR_SELECT_READER,
+    CLKSD_SDSC_ERROR_PROCESS_NEW_CARD,
+    CLKSD_SDSC_ERROR_READ_DOCUMENT_DATA,
+    CLKSD_SDSC_ERROR_READ_VEHICLE_DATA,
+    CLKSD_SDSC_ERROR_READ_PERSONAL_DATA,
+    CLKSD_SDSC_ERROR_CLEANUP,
+    CLKSD_SDSC_ERROR_FAILED
+};
+
+GQuark clksd_sdsc_error_quark();
+
+Sd *clksd_sdsc_read(GError **error);
+Sd *clksd_sdsc_new_from_esd(SD_DOCUMENT_DATA *dData, SD_VEHICLE_DATA *vData, SD_PERSONAL_DATA *pData);
+
+#endif	/* SDSC_H */

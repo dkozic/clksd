@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="clksd" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option show_notes="1">
+			<notes>
+				<![CDATA[Electronic identity card and vehicle registration reader]]>
+			</notes>
+		</Option>
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/clksd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option parameters="sr" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/clksd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="C:\Program Files\NSIS\makensis setup.nsi" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Test">
+				<Option output="bin/Test/clksd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Test/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config --cflags gtk+-2.0`" />
+			<Add option="`pkg-config --cflags sqlite3`" />
+			<Add option='-DG_LOG_DOMAIN=\&quot;cLKSD\&quot;' />
+			<Add directory="C:/NetBeansProjects7.3.1/clksd/lib" />
+			<Add directory="C:/CodeBlocks/DevPaks/include" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs gtk+-2.0`" />
+			<Add option="-lhpdf" />
+			<Add option="-lz" />
+			<Add option="-lsqlite3" />
+			<Add library="CelikApi" />
+			<Add library="eVehicleRegistrationAPI" />
+			<Add directory="C:/NetBeansProjects7.3.1/clksd/lib" />
+			<Add directory="C:/CodeBlocks/DevPaks/lib" />
+			<Add directory="C:/CodeBlocks/DevPaks/bin" />
+		</Linker>
+		<Unit filename="glade/about.glade" />
+		<Unit filename="glade/lkwindow.glade" />
+		<Unit filename="glade/mainwindow.glade" />
+		<Unit filename="glade/sdwindow.glade" />
+		<Unit filename="res/vcard.ico" />
+		<Unit filename="res/vcard.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/about.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/about.h" />
+		<Unit filename="src/lk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lk.h" />
+		<Unit filename="src/lkdb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lkdb.h" />
+		<Unit filename="src/lkprint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lkprint.h" />
+		<Unit filename="src/lksc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lksc.h" />
+		<Unit filename="src/lkwindow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lkwindow.h" />
+		<Unit filename="src/main.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/mainwindow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/mainwindow.h" />
+		<Unit filename="src/sd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/sd.h" />
+		<Unit filename="src/sddb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/sddb.h" />
+		<Unit filename="src/sdprint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/sdprint.h" />
+		<Unit filename="src/sdsc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/sdsc.h" />
+		<Unit filename="src/sdwindow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/sdwindow.h" />
+		<Unit filename="test/test_lk.c">
+			<Option compilerVar="CC" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lk.h">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lkdb.c">
+			<Option compilerVar="CC" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lkdb.h">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lkprint.c">
+			<Option compilerVar="CC" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lkprint.h">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lksc.c">
+			<Option compilerVar="CC" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_lksc.h">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/test_main.c">
+			<Option compilerVar="CC" />
+			<Option target="Test" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

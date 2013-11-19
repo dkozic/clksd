@@ -1,0 +1,344 @@
+# English translations for cLKSD package.
+# Copyright (C) 2013 Drazen Kozic kozic.drazen@gmail.com
+# This file is distributed under the same license as the cLKSD package.
+#  <kozic.drazen@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CLKSD 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-20 20:42+0200\n"
+"PO-Revision-Date: 2013-10-17 21:50+0200\n"
+"Last-Translator:  <kozic.drazen@gmail.com>\n"
+"Language-Team: English <gnu@prevod.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/lkwindow.c:221 src/sdwindow.c:221
+msgid "Read OK"
+msgstr ""
+
+#: src/lkwindow.c:250 src/sdwindow.c:252
+msgid "Print OK"
+msgstr ""
+
+#: src/lkwindow.c:282 src/sdwindow.c:284
+msgid "Delete OK"
+msgstr ""
+
+#: src/lkwindow.c:298 src/sdwindow.c:300
+msgid "Delete all OK"
+msgstr ""
+
+#: src/mainwindow.c:29
+msgid "Are you sure to quit?"
+msgstr ""
+
+#: src/mainwindow.c:30
+msgid "Question"
+msgstr ""
+
+#: glade/about.glade:13
+msgid "Serbian identity card reader."
+msgstr ""
+
+#: glade/lkwindow.glade:17 glade/mainwindow.glade:17
+msgid "IdentityCard"
+msgstr "Identity Card"
+
+#: glade/lkwindow.glade:32 glade/sdwindow.glade:60
+msgid "_File"
+msgstr ""
+
+#: glade/lkwindow.glade:42 glade/lkwindow.glade:118 glade/sdwindow.glade:70
+#: glade/sdwindow.glade:146
+msgid "Read"
+msgstr ""
+
+#: glade/lkwindow.glade:79 glade/sdwindow.glade:107
+msgid "_Help"
+msgstr ""
+
+#: glade/lkwindow.glade:135 glade/sdwindow.glade:163
+msgid "Print"
+msgstr ""
+
+#: glade/lkwindow.glade:185
+msgid "DocRegNo"
+msgstr "Reg No"
+
+#: glade/lkwindow.glade:198
+msgid "IssuingDate"
+msgstr "Issuing Date"
+
+#: glade/lkwindow.glade:213
+msgid "ExpiryDate"
+msgstr "Expiry date"
+
+#: glade/lkwindow.glade:228
+msgid "IssuingAuthority"
+msgstr "Issuing Authority"
+
+#: glade/lkwindow.glade:306 glade/sdwindow.glade:720
+msgid "<b>DocumentData</b>"
+msgstr "<b>Document Data</b>"
+
+#: glade/lkwindow.glade:341
+msgid "PersonalNumber"
+msgstr "Personal Number"
+
+#: glade/lkwindow.glade:354 glade/lkwindow.glade:998
+msgid "Surname"
+msgstr ""
+
+#: glade/lkwindow.glade:369 glade/lkwindow.glade:1012
+msgid "GivenName"
+msgstr "Given Name"
+
+#: glade/lkwindow.glade:384
+msgid "ParentGivenName"
+msgstr "Parent Given Name"
+
+#: glade/lkwindow.glade:399
+msgid "Sex"
+msgstr ""
+
+#: glade/lkwindow.glade:414
+msgid "PlaceOfBirth"
+msgstr "Place Of Birth"
+
+#: glade/lkwindow.glade:429
+msgid "StateOfBirth"
+msgstr "State Of Birth"
+
+#: glade/lkwindow.glade:444
+msgid "DateOfBirth"
+msgstr "Date Of Birth"
+
+#: glade/lkwindow.glade:459
+msgid "CommunityOfBirth"
+msgstr "Community Of Birth"
+
+#: glade/lkwindow.glade:617
+msgid "<b>FixedPersonalData</b>"
+msgstr "<b>Fixed Personal Data</b>"
+
+#: glade/lkwindow.glade:652
+msgid "Community"
+msgstr ""
+
+#: glade/lkwindow.glade:667
+msgid "Place"
+msgstr ""
+
+#: glade/lkwindow.glade:682
+msgid "Street"
+msgstr ""
+
+#: glade/lkwindow.glade:697
+msgid "HouseNumber"
+msgstr "House Number"
+
+#: glade/lkwindow.glade:712
+msgid "HouseLetter"
+msgstr "House Letter"
+
+#: glade/lkwindow.glade:727
+msgid "Entrance"
+msgstr ""
+
+#: glade/lkwindow.glade:742
+msgid "Floor"
+msgstr ""
+
+#: glade/lkwindow.glade:757
+msgid "ApartmentNumber"
+msgstr "Apartment Number"
+
+#: glade/lkwindow.glade:920
+msgid "State"
+msgstr ""
+
+#: glade/lkwindow.glade:934
+msgid "<b>VariablePersonalData</b>"
+msgstr "<b>Variable Personal Data</b>"
+
+#: glade/lkwindow.glade:966
+msgid "<b>Image</b>"
+msgstr ""
+
+#: glade/lkwindow.glade:1059 glade/sdwindow.glade:22
+msgid "Delete"
+msgstr ""
+
+#: glade/lkwindow.glade:1067 glade/sdwindow.glade:30
+msgid "Delete all"
+msgstr ""
+
+#: glade/lkwindow.glade:1075 glade/sdwindow.glade:38
+msgid "Show"
+msgstr ""
+
+#: glade/mainwindow.glade:31 glade/sdwindow.glade:45
+msgid "RegistrationCertificate"
+msgstr "Registration Certificate"
+
+#: glade/sdwindow.glade:213
+msgid "ownersPersonalNo"
+msgstr "Owner's Personal No"
+
+#: glade/sdwindow.glade:226
+msgid "ownersSurnameOrBusinessName"
+msgstr "Owner's Surname Or Business Name"
+
+#: glade/sdwindow.glade:241
+msgid "ownerName"
+msgstr "Owner's Name"
+
+#: glade/sdwindow.glade:256
+msgid "ownerAddress"
+msgstr "Owner's' Address"
+
+#: glade/sdwindow.glade:271
+msgid "usersPersonalNo"
+msgstr "User's Personal No"
+
+#: glade/sdwindow.glade:286
+msgid "usersSurnameOrBusinessName"
+msgstr "User's Surname Or Business Name"
+
+#: glade/sdwindow.glade:301
+msgid "usersName"
+msgstr "User's Name"
+
+#: glade/sdwindow.glade:316
+msgid "usersAddress"
+msgstr "User's Address"
+
+#: glade/sdwindow.glade:466
+msgid "<b>PersonalData</b>"
+msgstr "<b>Personal Data</b>"
+
+#: glade/sdwindow.glade:499
+msgid "stateIssuing"
+msgstr "State Issuing"
+
+#: glade/sdwindow.glade:512
+msgid "competentAuthority"
+msgstr "Competent Authority"
+
+#: glade/sdwindow.glade:527
+msgid "authorityIssuing"
+msgstr "Authority Issuing"
+
+#: glade/sdwindow.glade:542
+msgid "unambiguousNumber"
+msgstr "Unambiguous Number"
+
+#: glade/sdwindow.glade:557
+msgid "issuingDate"
+msgstr "Issuing Date"
+
+#: glade/sdwindow.glade:572
+msgid "expiryDate"
+msgstr "Expiry Date"
+
+#: glade/sdwindow.glade:587
+msgid "serialNumber"
+msgstr "Serial Number"
+
+#: glade/sdwindow.glade:755
+msgid "dateOfFirstRegistration"
+msgstr "Date Of First Registration"
+
+#: glade/sdwindow.glade:768
+msgid "yearOfProduction"
+msgstr "Year Of Production"
+
+#: glade/sdwindow.glade:783
+msgid "vehicleMake"
+msgstr "Vehicle Make"
+
+#: glade/sdwindow.glade:798
+msgid "vehicleType"
+msgstr "Vehicle Type"
+
+#: glade/sdwindow.glade:813 glade/sdwindow.glade:1496
+msgid "commercialDescription"
+msgstr "Commercial Description"
+
+#: glade/sdwindow.glade:828
+msgid "vehicleIDNumber"
+msgstr "Vehicle ID Number"
+
+#: glade/sdwindow.glade:843 glade/sdwindow.glade:1482
+msgid "registrationNumberOfVehicle"
+msgstr "Registration Number"
+
+#: glade/sdwindow.glade:858
+msgid "maximumNetPower"
+msgstr "Maximum Net Power"
+
+#: glade/sdwindow.glade:873
+msgid "engineCapacity"
+msgstr "Engine Capacity"
+
+#: glade/sdwindow.glade:888
+msgid "typeOfFuel"
+msgstr "Type Of Fuel"
+
+#: glade/sdwindow.glade:903
+msgid "powerWeightRatio"
+msgstr "Power Weight Ratio"
+
+#: glade/sdwindow.glade:918
+msgid "vehicleMass"
+msgstr "Vehicle Mass"
+
+#: glade/sdwindow.glade:933
+msgid "maximumPermissibleLadenMass"
+msgstr "Maximum Permissible Laden Mass"
+
+#: glade/sdwindow.glade:949
+msgid "typeApprovalNumber"
+msgstr "Type Approval Number"
+
+#: glade/sdwindow.glade:964
+msgid "numberOfSeats"
+msgstr "Number Of Seats"
+
+#: glade/sdwindow.glade:979
+msgid "numberOfStandingPlaces"
+msgstr "Number Of Standing Places"
+
+#: glade/sdwindow.glade:994
+msgid "engineIDNumber"
+msgstr "Engine ID Number"
+
+#: glade/sdwindow.glade:1009
+msgid "numberOfAxles"
+msgstr "Number Of Axles"
+
+#: glade/sdwindow.glade:1024
+msgid "vehicleCategory"
+msgstr "Vehicle Category"
+
+#: glade/sdwindow.glade:1039
+msgid "colourOfVehicle"
+msgstr "Colour Of Vehicle"
+
+#: glade/sdwindow.glade:1054
+msgid "restrictionToChangeOwner"
+msgstr "Restriction To Change Owner"
+
+#: glade/sdwindow.glade:1069
+msgid "vehicleLoad"
+msgstr "Vehicle Load"
+
+#: glade/sdwindow.glade:1447
+msgid "<b>VehicleData</b>"
+msgstr "<b>Vehicle Data</b>"
