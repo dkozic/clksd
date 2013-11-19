@@ -6,7 +6,23 @@ Reader of Serbian Identity Cards and Vehicle Registration Certificates
 cLKSD is reader of Serbian identity cards and vehicle registration certificates.
 It is developed using C programming language.
 
-cLKSD depends on [Celik API](http://www.mup.gov.rs/cms_lat/dokumenta.nsf/licna-karta-aplikacija.h)
+Features:
+
+ * cLKSD depends on [Celik API](http://www.mup.gov.rs/cms_lat/dokumenta.nsf/licna-karta-aplikacija.h)
 and [Saobracajna API](http://www.mup.gov.rs/cms_lat/dokumenta.nsf/registracija-citac-saobracajne.h)
 
+* The data are presented in GTK+ based GUI
+
+* It is localized in English and Serbian language
+
+* The data can be presented as PDF file
+
+* cLKSD can run on Windows platform only, beasouse of its dependency on Celik API and Saobracajna API
+
 It is released under LGPL 3.0 license.
+
+Project web site: [http://dkozic.github.io/elksd] (http://dkozic.github.io/elksd)
+
+Project repo: https://github.com/dkozic/elksd
+
+E-mail: kozic.drazen@gmail.com
