@@ -21,8 +21,8 @@ and [Saobracajna API](http://www.mup.gov.rs/cms_lat/dokumenta.nsf/registracija-c
 
 It is released under LGPL 3.0 license.
 
-Project web site: [http://dkozic.github.io/elksd] (http://dkozic.github.io/elksd)
+Project wiki: [https://github.com/dkozic/clksd/wiki] (https://github.com/dkozic/clksd/wiki)
 
-Project repo: https://github.com/dkozic/elksd
+Project repo: https://github.com/dkozic/clksd
 
 E-mail: kozic.drazen@gmail.com
