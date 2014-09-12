@@ -48,7 +48,7 @@
 			<Add option="`pkg-config --cflags gtk+-2.0`" />
 			<Add option="`pkg-config --cflags sqlite3`" />
 			<Add option='-DG_LOG_DOMAIN=\&quot;cLKSD\&quot;' />
-			<Add directory="C:/NetBeansProjects7.3.1/clksd/lib" />
+			<Add directory="C:/gitrepos/clksd/lib" />
 			<Add directory="C:/CodeBlocks/DevPaks/include" />
 		</Compiler>
 		<Linker>
@@ -58,7 +58,7 @@
 			<Add option="-lsqlite3" />
 			<Add library="CelikApi" />
 			<Add library="eVehicleRegistrationAPI" />
-			<Add directory="C:/NetBeansProjects7.3.1/clksd/lib" />
+			<Add directory="C:/gitrepos/clksd/lib" />
 			<Add directory="C:/CodeBlocks/DevPaks/lib" />
 			<Add directory="C:/CodeBlocks/DevPaks/bin" />
 		</Linker>
