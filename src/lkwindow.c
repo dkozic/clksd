@@ -24,7 +24,7 @@ typedef struct statusbar_message
     guint message;
 } StatusbarMessage;
 
-static void on_window_destroy(GtkObject *object, LkWindow *lkWindow)
+static void on_window_destroy(GtkWidget *object, LkWindow *lkWindow)
 {
     g_debug("Destroying lkwindow...");
     clksd_lk_free(lkWindow->lk);
@@ -220,7 +220,7 @@ static void read (LkWindow *lkWindow)
     //print OK message to status bar
     handle_message(lkWindow, _("Read OK"));
 }
-static void on_readtoolbutton_clicked(GtkObject *object, LkWindow *lkWindow)
+static void on_readtoolbutton_clicked(GtkWidget *object, LkWindow *lkWindow)
 {
     read (lkWindow);
 }
@@ -250,7 +250,7 @@ static void print (LkWindow *lkWindow)
     handle_message(lkWindow, _("Print OK"));
 }
 
-static void on_printtoolbutton_clicked(GtkObject *object, LkWindow *lkWindow)
+static void on_printtoolbutton_clicked(GtkWidget *object, LkWindow *lkWindow)
 {
     print(lkWindow);
 }
@@ -325,7 +325,7 @@ static void on_menuitem_show_clicked(GtkMenuItem *menuitem, LkWindow *lkWindow)
     }
 }
 
-static gboolean on_treeview_button_press(GtkObject *treeview, GdkEventButton *event,  GtkMenu *menu)
+static gboolean on_treeview_button_press(GtkWidget *treeview, GdkEventButton *event,  GtkMenu *menu)
 {
     if ((event->button == 3) && (event->type == GDK_BUTTON_PRESS))
     {

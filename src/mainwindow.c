@@ -10,7 +10,7 @@
 #include "sdwindow.h"
 #include "mainwindow.h"
 
-G_MODULE_EXPORT void clksd_mainwindow_on_destroy(GtkObject *object, MainWindow *mainWindow)
+G_MODULE_EXPORT void clksd_mainwindow_on_destroy(GtkWidget *object, MainWindow *mainWindow)
 {
     g_debug("Destroying cLKSD...");
     g_free(mainWindow);
@@ -18,7 +18,7 @@ G_MODULE_EXPORT void clksd_mainwindow_on_destroy(GtkObject *object, MainWindow *
     g_debug("Destroying cLKSD done!");
 }
 
-G_MODULE_EXPORT gboolean clksd_mainwindow_on_delete(GtkObject *object, GdkEvent *event, MainWindow *mainWindow)
+G_MODULE_EXPORT gboolean clksd_mainwindow_on_delete(GtkWidget *object, GdkEvent *event, MainWindow *mainWindow)
 {
     GtkWidget *dialog;
     gint response;
@@ -38,14 +38,14 @@ G_MODULE_EXPORT gboolean clksd_mainwindow_on_delete(GtkObject *object, GdkEvent 
 
 }
 
-G_MODULE_EXPORT void clksd_mainwindow_on_lkbutton_clicked(GtkObject *object, MainWindow *mainWindow)
+G_MODULE_EXPORT void clksd_mainwindow_on_lkbutton_clicked(GtkWidget *object, MainWindow *mainWindow)
 {
     LkWindow *lkWindow;
 
     lkWindow = clksd_lkwindow_new();
 }
 
-G_MODULE_EXPORT void clksd_mainwindow_on_sdbutton_clicked(GtkObject *object, MainWindow *mainWindow)
+G_MODULE_EXPORT void clksd_mainwindow_on_sdbutton_clicked(GtkWidget *object, MainWindow *mainWindow)
 {
     SdWindow *sdWindow;
 
