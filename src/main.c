@@ -1,7 +1,12 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
-#include "mainwindow.h"
+#include <windows.h>
+#include <sqlite3.h>
+#include "lk.h"
+#include "sd.h"
+#include "lkwindow.h"
+#include "sdwindow.h"
 
 #define GETTEXT_PACKAGE "clksd"
 #define PROGRAMNAME_LOCALEDIR "./locale"
@@ -23,12 +28,12 @@ int main(int argc, char *argv[])
     textdomain(GETTEXT_PACKAGE);
 
     /*Gtk staff*/
-    MainWindow *mainWindow;
+    LkWindow *lkWindow;
 
     g_debug("Starting cLKSD...");
     gtk_init(&argc, &argv);
 
-    mainWindow = clksd_mainwindow_new();
+    lkWindow = clksd_lkwindow_new();
 
     g_debug("Starting cLKSD done!");
 

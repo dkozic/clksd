@@ -9,7 +9,9 @@
 #include <sqlite3.h>
 #include <glib/gi18n.h>
 #include "lk.h"
+#include "sd.h"
 #include "lkwindow.h"
+#include "sdwindow.h"
 #include "about.h"
 #include "lkprint.h"
 #include "lksc.h"
@@ -24,9 +26,28 @@ typedef struct statusbar_message
     guint message;
 } StatusbarMessage;
 
+static void quit (LkWindow *lkWindow)
+{
+    g_debug("Destroying cLKSD...");
+    g_free(lkWindow);
+    gtk_main_quit();
+    g_debug("Destroying cLKSD done!");
+}
+
 static void on_window_destroy(GtkWidget *object, LkWindow *lkWindow)
 {
     g_debug("Destroying lkwindow...");
+
+    if (lkWindow != NULL && lkWindow->sdWindow != NULL && lkWindow->sdWindow->lkWindow != NULL)
+    {
+        lkWindow->sdWindow->lkWindow = NULL;
+        gtk_widget_set_sensitive(GTK_WIDGET(lkWindow->sdWindow->lkToolButton), TRUE);
+    }
+    if (lkWindow != NULL && lkWindow->sdWindow == NULL)
+    {
+        quit(lkWindow);
+    }
+
     clksd_lk_free(lkWindow->lk);
     g_free(lkWindow);
     g_debug("Destroying lkwindow done!");
@@ -255,6 +276,23 @@ static void on_printtoolbutton_clicked(GtkWidget *object, LkWindow *lkWindow)
     print(lkWindow);
 }
 
+static void sdwindow_open(LkWindow *lkWindow)
+{
+
+    if (lkWindow->sdWindow == NULL)
+    {
+        lkWindow->sdWindow = clksd_sdwindow_new();
+        lkWindow->sdWindow->lkWindow = lkWindow;
+        gtk_widget_set_sensitive(GTK_WIDGET(lkWindow->sdToolButton), FALSE);
+        gtk_widget_set_sensitive(GTK_WIDGET(lkWindow->sdWindow->lkToolButton), FALSE);
+    }
+}
+
+static void on_sdtoolbutton_clicked(GtkWidget *object, LkWindow *lkWindow)
+{
+    sdwindow_open(lkWindow);
+}
+
 static void on_menuitem_delete_clicked(GtkMenuItem *menuitem, LkWindow *lkWindow)
 {
     GtkTreeSelection *treeSelection;
@@ -405,6 +443,7 @@ LkWindow *clksd_lkwindow_new()
     }
 
     lkWindow->lk = NULL;
+    lkWindow->sdWindow = NULL;
     lkWindow->window = GTK_WINDOW(gtk_builder_get_object(builder, "lkwindow"));
 
     lkWindow->docRegNoTxt = GTK_LABEL(gtk_builder_get_object(builder, "DocRegNoTxt"));
@@ -434,6 +473,7 @@ LkWindow *clksd_lkwindow_new()
 
     lkWindow->readToolButton = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "readToolButton"));
     lkWindow->printToolButton = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "printToolButton"));
+    lkWindow->sdToolButton = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "sdToolButton"));
 
     lkWindow->image = GTK_IMAGE(gtk_builder_get_object(builder, "image"));
 
@@ -457,6 +497,7 @@ LkWindow *clksd_lkwindow_new()
     g_signal_connect(G_OBJECT(lkWindow->window), "destroy", G_CALLBACK(on_window_destroy), (gpointer) lkWindow);
     g_signal_connect(G_OBJECT(lkWindow->readToolButton), "clicked", G_CALLBACK(on_readtoolbutton_clicked), (gpointer) lkWindow);
     g_signal_connect(G_OBJECT(lkWindow->printToolButton), "clicked", G_CALLBACK(on_printtoolbutton_clicked), (gpointer) lkWindow);
+    g_signal_connect(G_OBJECT(lkWindow->sdToolButton), "clicked", G_CALLBACK(on_sdtoolbutton_clicked), (gpointer) lkWindow);
 
     g_signal_connect(G_OBJECT(lkWindow->treeview), "row_activated", G_CALLBACK(on_treeview_row_activated), lkWindow);
     g_signal_connect(G_OBJECT(lkWindow->treeview), "button_press_event", G_CALLBACK(on_treeview_button_press), lkWindow->popupmenu);

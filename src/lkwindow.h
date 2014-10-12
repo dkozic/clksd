@@ -11,8 +11,11 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+typedef struct LkWindowTag LkWindow;
 
-typedef struct LkWindowTag
+#include "sdwindow.h"
+
+struct LkWindowTag
 {
     GtkWindow *window;
 
@@ -45,6 +48,7 @@ typedef struct LkWindowTag
 
     GtkToolButton *printToolButton;
     GtkToolButton *readToolButton;
+    GtkToolButton *sdToolButton;
 
     GtkTreeView *treeview;
     GtkTreeViewColumn *treeviewcolumn1;
@@ -65,7 +69,9 @@ typedef struct LkWindowTag
 
     Lk *lk;
 
-} LkWindow;
+    SdWindow *sdWindow;
+
+};
 
 LkWindow *clksd_lkwindow_new();
 

@@ -13,7 +13,7 @@
 				<Option type="1" />
 				<Option compiler="gnu_gcc_compiler_-_w64" />
 				<Option use_console_runner="0" />
-				<Option parameters="sr@latin" />
+				<Option parameters="sr" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -64,7 +64,6 @@
 		</Linker>
 		<Unit filename="glade/about.glade" />
 		<Unit filename="glade/lkwindow.glade" />
-		<Unit filename="glade/mainwindow.glade" />
 		<Unit filename="glade/sdwindow.glade" />
 		<Unit filename="res/vcard.ico" />
 		<Unit filename="res/vcard.rc">
@@ -99,10 +98,6 @@
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="src/mainwindow.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="src/mainwindow.h" />
 		<Unit filename="src/sd.c">
 			<Option compilerVar="CC" />
 		</Unit>

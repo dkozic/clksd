@@ -1,4 +1,4 @@
-xgettext --add-comments=/ -o ./po/clksd.pot --keyword=_ -f./po/POTFILES.in
+xgettext --language=glade --add-comments=/ -o ./po/clksd.pot --keyword=_ -f./po/POTFILES.in
 
 msginit -lsr -i./po/clksd.pot -o./po/sr.po
 msginit -lsr -i./po/clksd.pot -o./po/sr@latin.po

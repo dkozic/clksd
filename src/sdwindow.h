@@ -12,7 +12,11 @@
 extern "C" {
 #endif
 
-typedef struct SdWindowTag
+typedef struct SdWindowTag SdWindow;
+
+#include "lkwindow.h"
+
+struct SdWindowTag
 {
     GtkWindow *window;
 
@@ -58,6 +62,7 @@ typedef struct SdWindowTag
 
     GtkToolButton *printToolButton;
     GtkToolButton *readToolButton;
+    GtkToolButton *lkToolButton;
 
     GtkTreeView *treeview;
     GtkTreeViewColumn *treeviewcolumn1;
@@ -77,7 +82,9 @@ typedef struct SdWindowTag
     GtkStatusbar *statusbar;
 
     Sd *sd;
-} SdWindow;
+
+    LkWindow *lkWindow;
+};
 
 SdWindow *clksd_sdwindow_new();
 

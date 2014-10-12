@@ -10,10 +10,12 @@
 #include <sqlite3.h>
 #include <glib/gi18n.h>
 #include "sd.h"
+#include "lk.h"
 #include "sdsc.h"
 #include "sddb.h"
 #include "sdprint.h"
 #include "sdwindow.h"
+#include "lkwindow.h"
 #include "about.h"
 
 #define STATUSBAR_TIMEOUT 3000
@@ -25,11 +27,31 @@ typedef struct statusbar_message
     guint message;
 } StatusbarMessage;
 
+static void quit (SdWindow *sdWindow)
+{
+    g_debug("Destroying cLKSD...");
+    g_free(sdWindow);
+    gtk_main_quit();
+    g_debug("Destroying cLKSD done!");
+}
+
 static void on_window_destroy(GtkWidget *object, SdWindow *sdWindow)
 {
     g_debug("Destroying sdwindow...");
+
+    if (sdWindow != NULL && sdWindow->lkWindow != NULL && sdWindow->lkWindow->sdWindow != NULL)
+    {
+        sdWindow->lkWindow->sdWindow = NULL;
+        gtk_widget_set_sensitive(GTK_WIDGET(sdWindow->lkWindow->sdToolButton), TRUE);
+    }
+    if (sdWindow != NULL && sdWindow->lkWindow == NULL)
+    {
+        quit(sdWindow);
+    }
+
     clksd_sd_free(sdWindow->sd);
     g_free(sdWindow);
+
     g_debug("Destroying sdwindow done!");
 }
 
@@ -257,6 +279,22 @@ static void on_printtoolbutton_clicked(GtkWidget *object, SdWindow *sdWindow)
     print(sdWindow);
 }
 
+static void lkwindow_open (SdWindow *sdWindow)
+{
+    if (sdWindow->lkWindow == NULL)
+    {
+        sdWindow->lkWindow = clksd_lkwindow_new();
+        sdWindow->lkWindow->sdWindow = sdWindow;
+        gtk_widget_set_sensitive(GTK_WIDGET(sdWindow->lkToolButton), FALSE);
+        gtk_widget_set_sensitive(GTK_WIDGET(sdWindow->lkWindow->sdToolButton), FALSE);
+    }
+}
+
+static void on_lktoolbutton_clicked(GtkWidget *object, SdWindow *sdWindow)
+{
+    lkwindow_open(sdWindow);
+}
+
 static void on_menuitem_delete_clicked(GtkMenuItem *menuitem, SdWindow *sdWindow)
 {
     GtkTreeSelection *treeSelection;
@@ -407,6 +445,7 @@ SdWindow *clksd_sdwindow_new()
     }
 
     sdWindow->sd = NULL;
+    sdWindow->lkWindow = NULL;
     sdWindow->window = GTK_WINDOW(gtk_builder_get_object(builder, "sdwindow"));
 
     sdWindow->stateIssuingTxt = GTK_LABEL(gtk_builder_get_object(builder, "stateIssuingTxt"));
@@ -451,6 +490,7 @@ SdWindow *clksd_sdwindow_new()
 
     sdWindow->readToolButton = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "readToolButton"));
     sdWindow->printToolButton = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "printToolButton"));
+    sdWindow->lkToolButton = GTK_TOOL_BUTTON(gtk_builder_get_object(builder, "lkToolButton"));
 
     sdWindow->statusbar = GTK_STATUSBAR(gtk_builder_get_object(builder, "statusbar"));
 
@@ -472,6 +512,7 @@ SdWindow *clksd_sdwindow_new()
     g_signal_connect(G_OBJECT(sdWindow->window), "destroy", G_CALLBACK(on_window_destroy), (gpointer) sdWindow);
     g_signal_connect(G_OBJECT(sdWindow->readToolButton), "clicked", G_CALLBACK(on_readtoolbutton_clicked), (gpointer) sdWindow);
     g_signal_connect(G_OBJECT(sdWindow->printToolButton), "clicked", G_CALLBACK(on_printtoolbutton_clicked), (gpointer) sdWindow);
+    g_signal_connect(G_OBJECT(sdWindow->lkToolButton), "clicked", G_CALLBACK(on_lktoolbutton_clicked), (gpointer) sdWindow);
 
     g_signal_connect(G_OBJECT(sdWindow->treeview), "row_activated", G_CALLBACK(on_treeview_row_activated), sdWindow);
     g_signal_connect(G_OBJECT(sdWindow->treeview), "button_press_event", G_CALLBACK(on_treeview_button_press), sdWindow->popupmenu);
