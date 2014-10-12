@@ -2,13 +2,13 @@
 
 ; Define your application name
 !define APPNAME "cLKSD"
-!define APPNAMEANDVERSION "cLKSD 0.0.2"
+!define APPNAMEANDVERSION "cLKSD v1.0"
 
 ; Main Install settings
 Name "${APPNAMEANDVERSION}"
 InstallDir "$PROGRAMFILES\cLKSD"
 InstallDirRegKey HKLM "Software\${APPNAME}" ""
-OutFile "clksd-0.0.2-setup.exe"
+OutFile "clksd-1.0-setup.exe"
 
 DirText "Choose the folder in which to install ${APPNAMEANDVERSION}."
 
@@ -19,21 +19,21 @@ Section "cLKSD"
 
 	; Set Section Files and Shortcuts
 	SetOutPath "$INSTDIR\"
-	File /r "C:\gtk+_2.24.10-runtime\*"
-	
+	File /r "C:\gtk+_3.6.4\*"
+
 	SetOutPath "$INSTDIR\bin"
 	File bin\Release\clksd.exe
 	File clksd.sqlite
 	File lib\eVehicleRegistrationAPI.dll
 	File lib\CelikApi.dll
 	File C:\CodeBlocks\DevPaks\bin\sqlite3.dll
-	
+
 	SetOutPath "$INSTDIR\bin\fonts"
 	File /r fonts\*
-	
+
 	SetOutPath "$INSTDIR\bin\glade"
 	File /r glade\*
-	
+
 	SetOutPath "$INSTDIR\bin\locale"
 	File /r locale\*
 
