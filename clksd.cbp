@@ -5,13 +5,13 @@
 		<Option title="clksd" />
 		<Option platforms="Windows;" />
 		<Option pch_mode="2" />
-		<Option compiler="gnu_gcc_compiler_-_w64" />
+		<Option compiler="mingw-w64_32bit" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/clksd" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="gnu_gcc_compiler_-_w64" />
+				<Option compiler="mingw-w64_32bit" />
 				<Option use_console_runner="0" />
 				<Option parameters="sr" />
 				<Compiler>
@@ -22,7 +22,7 @@
 				<Option output="bin/Release/clksd" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
-				<Option compiler="gnu_gcc_compiler_-_w64" />
+				<Option compiler="mingw-w64_32bit" />
 				<Compiler>
 					<Add option="-O2" />
 				</Compiler>
@@ -30,14 +30,14 @@
 					<Add option="-s" />
 				</Linker>
 				<ExtraCommands>
-					<Add after="C:\Program Files\NSIS\makensis setup.nsi" />
+					<Add after="C:\Program Files (x86)\NSIS\makensis.exe setup.nsi" />
 				</ExtraCommands>
 			</Target>
 			<Target title="Test">
 				<Option output="bin/Test/clksd" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Test/" />
 				<Option type="1" />
-				<Option compiler="gnu_gcc_compiler_-_w64" />
+				<Option compiler="mingw-w64_32bit" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -53,14 +53,16 @@
 		</Compiler>
 		<Linker>
 			<Add option="`pkg-config --libs gtk+-3.0`" />
-			<Add option="-lhpdf" />
+			<Add option="`pkg-config --libs sqlite3`" />
+			<Add option="-lhpdfs" />
 			<Add option="-lz" />
-			<Add option="-lsqlite3" />
 			<Add library="CelikApi" />
 			<Add library="eVehicleRegistrationAPI" />
 			<Add directory="C:/gitrepos/clksd/lib" />
 			<Add directory="C:/CodeBlocks/DevPaks/lib" />
 			<Add directory="C:/CodeBlocks/DevPaks/bin" />
+			<Add directory="C:/msys64/mingw32/lib" />
+			<Add directory="C:/msys64/mingw32/bin" />
 		</Linker>
 		<Unit filename="glade/about.glade" />
 		<Unit filename="glade/lkwindow.glade" />
@@ -152,9 +154,11 @@
 		</Unit>
 		<Extensions>
 			<code_completion />
-			<envvars />
+			<envvars set="msys2_32bit" />
 			<debugger />
-			<lib_finder disable_auto="1" />
+			<lib_finder disable_auto="1">
+				<lib name="python-3.7" />
+			</lib_finder>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
 				<doxyfile_project />

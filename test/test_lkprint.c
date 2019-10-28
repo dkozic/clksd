@@ -12,6 +12,7 @@ void clksd_lkprint_Test0(void)
 {
     Lk *lk;
     char *fname = "test.pdf";
+    GError *error = NULL;
 
     lk = clksd_lk_new();
     clksd_lk_set_docRegNo(lk, "docRegNo");
@@ -40,7 +41,7 @@ void clksd_lkprint_Test0(void)
 
     //clksd_lk_set_portrait(lk, bytes, 4);
 
-    clksd_lkprint_print (lk, fname);
+    clksd_lkprint_print (lk, fname, &error);
 
     ShellExecute(NULL, "open", fname, NULL, NULL, SW_SHOWNORMAL);
 }

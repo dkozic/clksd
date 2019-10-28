@@ -28,12 +28,13 @@ int main(int argc, char *argv[])
     textdomain(GETTEXT_PACKAGE);
 
     /*Gtk staff*/
-    LkWindow *lkWindow;
+    //LkWindow *lkWindow;
 
     g_debug("Starting cLKSD...");
     gtk_init(&argc, &argv);
 
-    lkWindow = clksd_lkwindow_new();
+    //lkWindow = clksd_lkwindow_new();
+    clksd_lkwindow_new();
 
     g_debug("Starting cLKSD done!");
 

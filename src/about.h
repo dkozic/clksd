@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   about.h
  * Author: dkozic
  *
@@ -20,6 +20,6 @@ GtkAboutDialog *clksd_aboutdialog_new();
 }
 #endif
 
-#endif	/* LK_H */
+#endif	/* ABOUT_H */
 
 

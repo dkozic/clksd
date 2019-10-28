@@ -369,7 +369,7 @@ static gboolean on_treeview_button_press(GtkWidget *treeview, GdkEventButton *ev
 {
     if ((event->button == 3) && (event->type == GDK_BUTTON_PRESS))
     {
-        gtk_menu_popup(menu, NULL, NULL, NULL, NULL, event->button, event->time);
+        gtk_menu_popup_at_pointer(menu, NULL);
         return TRUE;
     }
     return FALSE;

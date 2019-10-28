@@ -82,7 +82,7 @@ static void lk_clear(LkWindow *lkWindow)
     gtk_label_set_label(lkWindow->entranceTxt, NULL);
     gtk_label_set_label(lkWindow->apartmentNumberTxt, NULL);
 
-    gtk_image_set_from_stock(lkWindow->image, GTK_STOCK_MISSING_IMAGE, GTK_ICON_SIZE_BUTTON);
+    gtk_image_set_from_icon_name (lkWindow->image, "image-missing", GTK_ICON_SIZE_BUTTON);
     gtk_widget_set_sensitive(GTK_WIDGET(lkWindow->printToolButton), FALSE);
     gtk_widget_set_sensitive(GTK_WIDGET(lkWindow->menuitem_print), FALSE);
 }
@@ -367,7 +367,7 @@ static gboolean on_treeview_button_press(GtkWidget *treeview, GdkEventButton *ev
 {
     if ((event->button == 3) && (event->type == GDK_BUTTON_PRESS))
     {
-        gtk_menu_popup(menu, NULL, NULL, NULL, NULL, event->button, event->time);
+        gtk_menu_popup_at_pointer(menu, NULL);
         return TRUE;
     }
     return FALSE;
