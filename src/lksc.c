@@ -119,14 +119,15 @@ Lk *clksd_lksc_read_eid(GError **error)
     Lk *lk = NULL;
     int result;
 
-    result = EidStartup(1);
+    result = EidStartup(2);
     if (result != EID_OK)
     {
         g_set_error(error, CLKSD_LKSC_ERROR ,CLKSD_LKSC_ERROR_STARTUP, "Can't startup: errcode: %d, errmsg: %s", result, eid_message(result));
         return lk;
     }
 
-    result = EidBeginRead("");
+    int pnCardVersion;
+    result = EidBeginRead("", &pnCardVersion);
     if (result != EID_OK)
     {
         EidCleanup();

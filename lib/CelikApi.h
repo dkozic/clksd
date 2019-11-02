@@ -14,6 +14,8 @@ extern "C" {
 #define EID_API
 #endif
 
+#pragma pack(push, 4)
+
 //
 // Constants
 //
@@ -21,29 +23,32 @@ extern "C" {
 // Size of all UTF-8 and binary fields in bytes
 
 #define EID_MAX_DocRegNo 9
+#define EID_MAX_DocumentType 2
 #define EID_MAX_IssuingDate 10
 #define EID_MAX_ExpiryDate 10
-#define EID_MAX_IssuingAuthority 30
+#define EID_MAX_IssuingAuthority 100
 
 #define EID_MAX_PersonalNumber 13
-#define EID_MAX_Surname 60
-#define EID_MAX_GivenName 40
-#define EID_MAX_ParentGivenName 25
+#define EID_MAX_Surname 200
+#define EID_MAX_GivenName 200
+#define EID_MAX_ParentGivenName 200
 #define EID_MAX_Sex 2
-#define EID_MAX_PlaceOfBirth 25
-#define EID_MAX_StateOfBirth 25
+#define EID_MAX_PlaceOfBirth 200
+#define EID_MAX_StateOfBirth 200
 #define EID_MAX_DateOfBirth 10
-#define EID_MAX_CommunityOfBirth 25
+#define EID_MAX_CommunityOfBirth 200
 
-#define EID_MAX_State 3
-#define EID_MAX_Community 25
-#define EID_MAX_Place 25
-#define EID_MAX_Street 36
-#define EID_MAX_HouseNumber 5
-#define EID_MAX_HouseLetter 2
-#define EID_MAX_Entrance 3
-#define EID_MAX_Floor 3
-#define EID_MAX_ApartmentNumber 6
+#define EID_MAX_State 100
+#define EID_MAX_Community 200
+#define EID_MAX_Place 200
+#define EID_MAX_Street 200
+#define EID_MAX_HouseNumber 20
+#define EID_MAX_HouseLetter 8
+#define EID_MAX_Entrance 10
+#define EID_MAX_Floor 6
+#define EID_MAX_ApartmentNumber 12
+#define EID_MAX_AddressDate 10
+#define EID_MAX_AddressLabel 60
 
 #define EID_MAX_Portrait 7700
 
@@ -72,11 +77,15 @@ extern "C" {
 #define EID_SIG_VARIABLE           3
 #define EID_SIG_PORTRAIT           4
 
+// For new card version EidVerifySignature function will return EID_E_UNABLE_TO_EXECUTE for
+// parameter EID_SIG_PORTRAIT. Portrait is in new cards part of EID_SIG_FIXED. To determine
+// the card version use second parameter of function EidBeginRead
+
 //
 // Function return values
 //
 
-#define EID_OK                            0
+#define EID_OK                             0
 #define EID_E_GENERAL_ERROR               -1
 #define EID_E_INVALID_PARAMETER           -2
 #define EID_E_VERSION_NOT_SUPPORTED       -3
@@ -90,6 +99,8 @@ extern "C" {
 #define EID_E_DATA_MISSING                -11
 #define EID_E_CARD_SECFORMAT_CHECK_ERROR  -12
 #define EID_E_SECFORMAT_CHECK_CERT_ERROR  -13
+#define EID_E_INVALID_PASSWORD            -14
+#define EID_E_PIN_BLOCKED                 -15
 
 //
 // Structures
@@ -101,6 +112,8 @@ typedef struct tagEID_DOCUMENT_DATA
 {
 	char docRegNo[EID_MAX_DocRegNo];
 	int docRegNoSize;
+	char documentType[EID_MAX_DocumentType];
+	int documentTypeSize;
 	char issuingDate[EID_MAX_IssuingDate];
 	int issuingDateSize;
 	char expiryDate[EID_MAX_ExpiryDate];
@@ -151,6 +164,10 @@ typedef struct tagEID_VARIABLE_PERSONAL_DATA
 	int floorSize;
 	char apartmentNumber[EID_MAX_ApartmentNumber];
 	int apartmentNumberSize;
+	char addressDate[EID_MAX_AddressDate];
+	int addressDateSize;
+	char addressLabel[EID_MAX_AddressLabel];
+	int addressLabelSize;
 } EID_VARIABLE_PERSONAL_DATA, *PEID_VARIABLE_PERSONAL_DATA;
 
 typedef struct tagEID_PORTRAIT
@@ -174,7 +191,7 @@ EID_API int WINAPI EidSetOption(int nOptionID, UINT_PTR nOptionValue);
 EID_API int WINAPI EidStartup(int nApiVersion);
 EID_API int WINAPI EidCleanup();
 
-EID_API int WINAPI EidBeginRead(LPCSTR szReader);
+EID_API int WINAPI EidBeginRead(LPCSTR szReader, int* pnCardVersion);
 EID_API int WINAPI EidEndRead();
 
 EID_API int WINAPI EidReadDocumentData(PEID_DOCUMENT_DATA pData);
@@ -183,9 +200,11 @@ EID_API int WINAPI EidReadVariablePersonalData(PEID_VARIABLE_PERSONAL_DATA pData
 EID_API int WINAPI EidReadPortrait(PEID_PORTRAIT pData);
 EID_API int WINAPI EidReadCertificate(PEID_CERTIFICATE pData, int certificateType);
 
-EID_API int WINAPI EidChangePassword(LPCSTR szOldPassword, LPCSTR szNewPassword);
+EID_API int WINAPI EidChangePassword(LPCSTR szOldPassword, LPCSTR szNewPassword, int* pnTriesLeft);
 EID_API int WINAPI EidVerifySignature(UINT nSignatureID);
 
+
+#pragma pack(pop)
 
 #ifdef __cplusplus
 };
