@@ -71,13 +71,12 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem" id="menuitem_print">
-                        <property name="label">gtk-print-preview</property>
+                      <object class="GtkMenuItem" id="menuitem_print">
+                        <property name="label">Preview</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
                       </object>
                     </child>
                     <child>
@@ -87,12 +86,11 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem" id="menuitem_quit">
-                        <property name="label">gtk-quit</property>
+                      <object class="GtkMenuItem" id="menuitem_quit">
+                        <property name="label">Quit</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
                       </object>
                     </child>
                   </object>
@@ -110,12 +108,11 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem" id="menuitem_about">
-                        <property name="label">gtk-about</property>
+                      <object class="GtkMenuItem" id="menuitem_about">
+                        <property name="label">About</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
                       </object>
                     </child>
                   </object>

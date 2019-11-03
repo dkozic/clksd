@@ -489,10 +489,10 @@ LkWindow *clksd_lkwindow_new()
     lkWindow->menuitem_delete_all = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_delete_all"));
     lkWindow->menuitem_show = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_show"));
 
-    lkWindow->menuitem_about = GTK_IMAGE_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_about"));
+    lkWindow->menuitem_about = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_about"));
     lkWindow->menuitem_read = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_read"));
-    lkWindow->menuitem_print = GTK_IMAGE_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_print"));
-    lkWindow->menuitem_quit = GTK_IMAGE_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_quit"));
+    lkWindow->menuitem_print = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_print"));
+    lkWindow->menuitem_quit = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_quit"));
 
     g_signal_connect(G_OBJECT(lkWindow->window), "destroy", G_CALLBACK(on_window_destroy), (gpointer) lkWindow);
     g_signal_connect(G_OBJECT(lkWindow->readToolButton), "clicked", G_CALLBACK(on_readtoolbutton_clicked), (gpointer) lkWindow);

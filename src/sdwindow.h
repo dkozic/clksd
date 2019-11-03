@@ -75,9 +75,9 @@ struct SdWindowTag
     GtkMenuItem *menuitem_show;
 
     GtkMenuItem *menuitem_read;
-    GtkImageMenuItem *menuitem_print;
-    GtkImageMenuItem *menuitem_quit;
-    GtkImageMenuItem *menuitem_about;
+    GtkMenuItem *menuitem_print;
+    GtkMenuItem *menuitem_quit;
+    GtkMenuItem *menuitem_about;
 
     GtkStatusbar *statusbar;
 

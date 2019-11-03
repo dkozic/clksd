@@ -504,10 +504,10 @@ SdWindow *clksd_sdwindow_new()
     sdWindow->menuitem_delete_all = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_delete_all"));
     sdWindow->menuitem_show = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_show"));
 
-    sdWindow->menuitem_about = GTK_IMAGE_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_about"));
+    sdWindow->menuitem_about = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_about"));
     sdWindow->menuitem_read = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_read"));
-    sdWindow->menuitem_print = GTK_IMAGE_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_print"));
-    sdWindow->menuitem_quit = GTK_IMAGE_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_quit"));
+    sdWindow->menuitem_print = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_print"));
+    sdWindow->menuitem_quit = GTK_MENU_ITEM(gtk_builder_get_object(builder, "menuitem_quit"));
 
     g_signal_connect(G_OBJECT(sdWindow->window), "destroy", G_CALLBACK(on_window_destroy), (gpointer) sdWindow);
     g_signal_connect(G_OBJECT(sdWindow->readToolButton), "clicked", G_CALLBACK(on_readtoolbutton_clicked), (gpointer) sdWindow);

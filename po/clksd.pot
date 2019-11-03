@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-20 20:42+0200\n"
+"POT-Creation-Date: 2019-11-03 07:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,327 +17,335 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/lkwindow.c:221 src/sdwindow.c:221
+#: src/lkwindow.c:242 src/sdwindow.c:243
 msgid "Read OK"
 msgstr ""
 
-#: src/lkwindow.c:250 src/sdwindow.c:252
+#: src/lkwindow.c:271 src/sdwindow.c:274
 msgid "Print OK"
 msgstr ""
 
-#: src/lkwindow.c:282 src/sdwindow.c:284
+#: src/lkwindow.c:320 src/sdwindow.c:322
 msgid "Delete OK"
 msgstr ""
 
-#: src/lkwindow.c:298 src/sdwindow.c:300
+#: src/lkwindow.c:336 src/sdwindow.c:338
 msgid "Delete all OK"
 msgstr ""
 
-#: src/mainwindow.c:29
-msgid "Are you sure to quit?"
-msgstr ""
-
-#: src/mainwindow.c:30
-msgid "Question"
-msgstr ""
-
-#: glade/about.glade:13
+#: glade/about.glade:12
 msgid "Serbian identity card reader."
 msgstr ""
 
-#: glade/lkwindow.glade:17 glade/mainwindow.glade:17
+#: glade/lkwindow.glade:16
 msgid "IdentityCard"
 msgstr ""
 
-#: glade/lkwindow.glade:32 glade/sdwindow.glade:60
+#: glade/lkwindow.glade:31 glade/sdwindow.glade:59
 msgid "_File"
 msgstr ""
 
-#: glade/lkwindow.glade:42 glade/lkwindow.glade:118 glade/sdwindow.glade:70
-#: glade/sdwindow.glade:146
+#: glade/lkwindow.glade:41 glade/lkwindow.glade:114 glade/sdwindow.glade:69
+#: glade/sdwindow.glade:142
 msgid "Read"
 msgstr ""
 
-#: glade/lkwindow.glade:79 glade/sdwindow.glade:107
-msgid "_Help"
-msgstr ""
-
-#: glade/lkwindow.glade:135 glade/sdwindow.glade:163
+#: glade/lkwindow.glade:47 glade/lkwindow.glade:131 glade/sdwindow.glade:159
 msgid "Print"
 msgstr ""
 
-#: glade/lkwindow.glade:185
+#: glade/lkwindow.glade:62
+msgid "Quit"
+msgstr ""
+
+#: glade/lkwindow.glade:76 glade/sdwindow.glade:104
+msgid "_Help"
+msgstr ""
+
+#: glade/lkwindow.glade:84
+msgid "About"
+msgstr ""
+
+#: glade/lkwindow.glade:147
+msgid "SD"
+msgstr ""
+
+#: glade/lkwindow.glade:196
 msgid "DocRegNo"
 msgstr ""
 
-#: glade/lkwindow.glade:198
+#: glade/lkwindow.glade:209
 msgid "IssuingDate"
 msgstr ""
 
-#: glade/lkwindow.glade:213
+#: glade/lkwindow.glade:224
 msgid "ExpiryDate"
 msgstr ""
 
-#: glade/lkwindow.glade:228
+#: glade/lkwindow.glade:239
 msgid "IssuingAuthority"
 msgstr ""
 
-#: glade/lkwindow.glade:306 glade/sdwindow.glade:720
+#: glade/lkwindow.glade:317 glade/sdwindow.glade:731
 msgid "<b>DocumentData</b>"
 msgstr ""
 
-#: glade/lkwindow.glade:341
+#: glade/lkwindow.glade:352
 msgid "PersonalNumber"
 msgstr ""
 
-#: glade/lkwindow.glade:354 glade/lkwindow.glade:998
+#: glade/lkwindow.glade:365 glade/lkwindow.glade:1011
 msgid "Surname"
 msgstr ""
 
-#: glade/lkwindow.glade:369 glade/lkwindow.glade:1012
+#: glade/lkwindow.glade:380 glade/lkwindow.glade:1025
 msgid "GivenName"
 msgstr ""
 
-#: glade/lkwindow.glade:384
+#: glade/lkwindow.glade:395
 msgid "ParentGivenName"
 msgstr ""
 
-#: glade/lkwindow.glade:399
+#: glade/lkwindow.glade:410
 msgid "Sex"
 msgstr ""
 
-#: glade/lkwindow.glade:414
+#: glade/lkwindow.glade:425
 msgid "PlaceOfBirth"
 msgstr ""
 
-#: glade/lkwindow.glade:429
+#: glade/lkwindow.glade:440
 msgid "StateOfBirth"
 msgstr ""
 
-#: glade/lkwindow.glade:444
+#: glade/lkwindow.glade:455
 msgid "DateOfBirth"
 msgstr ""
 
-#: glade/lkwindow.glade:459
+#: glade/lkwindow.glade:470
 msgid "CommunityOfBirth"
 msgstr ""
 
-#: glade/lkwindow.glade:617
+#: glade/lkwindow.glade:628
 msgid "<b>FixedPersonalData</b>"
 msgstr ""
 
-#: glade/lkwindow.glade:652
+#: glade/lkwindow.glade:663
 msgid "Community"
 msgstr ""
 
-#: glade/lkwindow.glade:667
+#: glade/lkwindow.glade:678
 msgid "Place"
 msgstr ""
 
-#: glade/lkwindow.glade:682
+#: glade/lkwindow.glade:693
 msgid "Street"
 msgstr ""
 
-#: glade/lkwindow.glade:697
+#: glade/lkwindow.glade:708
 msgid "HouseNumber"
 msgstr ""
 
-#: glade/lkwindow.glade:712
+#: glade/lkwindow.glade:723
 msgid "HouseLetter"
 msgstr ""
 
-#: glade/lkwindow.glade:727
+#: glade/lkwindow.glade:738
 msgid "Entrance"
 msgstr ""
 
-#: glade/lkwindow.glade:742
+#: glade/lkwindow.glade:753
 msgid "Floor"
 msgstr ""
 
-#: glade/lkwindow.glade:757
+#: glade/lkwindow.glade:768
 msgid "ApartmentNumber"
 msgstr ""
 
-#: glade/lkwindow.glade:920
+#: glade/lkwindow.glade:931
 msgid "State"
 msgstr ""
 
-#: glade/lkwindow.glade:934
+#: glade/lkwindow.glade:945
 msgid "<b>VariablePersonalData</b>"
 msgstr ""
 
-#: glade/lkwindow.glade:966
+#: glade/lkwindow.glade:977
 msgid "<b>Image</b>"
 msgstr ""
 
-#: glade/lkwindow.glade:1059 glade/sdwindow.glade:22
+#: glade/lkwindow.glade:1072 glade/sdwindow.glade:21
 msgid "Delete"
 msgstr ""
 
-#: glade/lkwindow.glade:1067 glade/sdwindow.glade:30
+#: glade/lkwindow.glade:1080 glade/sdwindow.glade:29
 msgid "Delete all"
 msgstr ""
 
-#: glade/lkwindow.glade:1075 glade/sdwindow.glade:38
+#: glade/lkwindow.glade:1088 glade/sdwindow.glade:37
 msgid "Show"
 msgstr ""
 
-#: glade/mainwindow.glade:31 glade/sdwindow.glade:45
+#: glade/sdwindow.glade:44
 msgid "RegistrationCertificate"
 msgstr ""
 
-#: glade/sdwindow.glade:213
+#: glade/sdwindow.glade:175
+msgid "LK"
+msgstr ""
+
+#: glade/sdwindow.glade:224
 msgid "ownersPersonalNo"
 msgstr ""
 
-#: glade/sdwindow.glade:226
+#: glade/sdwindow.glade:237
 msgid "ownersSurnameOrBusinessName"
 msgstr ""
 
-#: glade/sdwindow.glade:241
+#: glade/sdwindow.glade:252
 msgid "ownerName"
 msgstr ""
 
-#: glade/sdwindow.glade:256
+#: glade/sdwindow.glade:267
 msgid "ownerAddress"
 msgstr ""
 
-#: glade/sdwindow.glade:271
+#: glade/sdwindow.glade:282
 msgid "usersPersonalNo"
 msgstr ""
 
-#: glade/sdwindow.glade:286
+#: glade/sdwindow.glade:297
 msgid "usersSurnameOrBusinessName"
 msgstr ""
 
-#: glade/sdwindow.glade:301
+#: glade/sdwindow.glade:312
 msgid "usersName"
 msgstr ""
 
-#: glade/sdwindow.glade:316
+#: glade/sdwindow.glade:327
 msgid "usersAddress"
 msgstr ""
 
-#: glade/sdwindow.glade:466
+#: glade/sdwindow.glade:477
 msgid "<b>PersonalData</b>"
 msgstr ""
 
-#: glade/sdwindow.glade:499
+#: glade/sdwindow.glade:510
 msgid "stateIssuing"
 msgstr ""
 
-#: glade/sdwindow.glade:512
+#: glade/sdwindow.glade:523
 msgid "competentAuthority"
 msgstr ""
 
-#: glade/sdwindow.glade:527
+#: glade/sdwindow.glade:538
 msgid "authorityIssuing"
 msgstr ""
 
-#: glade/sdwindow.glade:542
+#: glade/sdwindow.glade:553
 msgid "unambiguousNumber"
 msgstr ""
 
-#: glade/sdwindow.glade:557
+#: glade/sdwindow.glade:568
 msgid "issuingDate"
 msgstr ""
 
-#: glade/sdwindow.glade:572
+#: glade/sdwindow.glade:583
 msgid "expiryDate"
 msgstr ""
 
-#: glade/sdwindow.glade:587
+#: glade/sdwindow.glade:598
 msgid "serialNumber"
 msgstr ""
 
-#: glade/sdwindow.glade:755
+#: glade/sdwindow.glade:766
 msgid "dateOfFirstRegistration"
 msgstr ""
 
-#: glade/sdwindow.glade:768
+#: glade/sdwindow.glade:779
 msgid "yearOfProduction"
 msgstr ""
 
-#: glade/sdwindow.glade:783
+#: glade/sdwindow.glade:794
 msgid "vehicleMake"
 msgstr ""
 
-#: glade/sdwindow.glade:798
+#: glade/sdwindow.glade:809
 msgid "vehicleType"
 msgstr ""
 
-#: glade/sdwindow.glade:813 glade/sdwindow.glade:1496
+#: glade/sdwindow.glade:824 glade/sdwindow.glade:1509
 msgid "commercialDescription"
 msgstr ""
 
-#: glade/sdwindow.glade:828
+#: glade/sdwindow.glade:839
 msgid "vehicleIDNumber"
 msgstr ""
 
-#: glade/sdwindow.glade:843 glade/sdwindow.glade:1482
+#: glade/sdwindow.glade:854 glade/sdwindow.glade:1495
 msgid "registrationNumberOfVehicle"
 msgstr ""
 
-#: glade/sdwindow.glade:858
+#: glade/sdwindow.glade:869
 msgid "maximumNetPower"
 msgstr ""
 
-#: glade/sdwindow.glade:873
+#: glade/sdwindow.glade:884
 msgid "engineCapacity"
 msgstr ""
 
-#: glade/sdwindow.glade:888
+#: glade/sdwindow.glade:899
 msgid "typeOfFuel"
 msgstr ""
 
-#: glade/sdwindow.glade:903
+#: glade/sdwindow.glade:914
 msgid "powerWeightRatio"
 msgstr ""
 
-#: glade/sdwindow.glade:918
+#: glade/sdwindow.glade:929
 msgid "vehicleMass"
 msgstr ""
 
-#: glade/sdwindow.glade:933
+#: glade/sdwindow.glade:944
 msgid "maximumPermissibleLadenMass"
 msgstr ""
 
-#: glade/sdwindow.glade:949
+#: glade/sdwindow.glade:960
 msgid "typeApprovalNumber"
 msgstr ""
 
-#: glade/sdwindow.glade:964
+#: glade/sdwindow.glade:975
 msgid "numberOfSeats"
 msgstr ""
 
-#: glade/sdwindow.glade:979
+#: glade/sdwindow.glade:990
 msgid "numberOfStandingPlaces"
 msgstr ""
 
-#: glade/sdwindow.glade:994
+#: glade/sdwindow.glade:1005
 msgid "engineIDNumber"
 msgstr ""
 
-#: glade/sdwindow.glade:1009
+#: glade/sdwindow.glade:1020
 msgid "numberOfAxles"
 msgstr ""
 
-#: glade/sdwindow.glade:1024
+#: glade/sdwindow.glade:1035
 msgid "vehicleCategory"
 msgstr ""
 
-#: glade/sdwindow.glade:1039
+#: glade/sdwindow.glade:1050
 msgid "colourOfVehicle"
 msgstr ""
 
-#: glade/sdwindow.glade:1054
+#: glade/sdwindow.glade:1065
 msgid "restrictionToChangeOwner"
 msgstr ""
 
-#: glade/sdwindow.glade:1069
+#: glade/sdwindow.glade:1080
 msgid "vehicleLoad"
 msgstr ""
 
-#: glade/sdwindow.glade:1447
+#: glade/sdwindow.glade:1458
 msgid "<b>VehicleData</b>"
 msgstr ""
