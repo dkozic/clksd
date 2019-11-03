@@ -175,14 +175,14 @@ Lk *clksd_lksc_read_eid(GError **error)
     if (result!= EID_OK)
     {
         EidCleanup();
-        g_set_error(error, CLKSD_LKSC_ERROR ,CLKSD_LKSC_ERROR_READ_PORTRAIT, "Can't end read: errcode: %d, errmsg: %s", result, eid_message(result));
+        g_set_error(error, CLKSD_LKSC_ERROR ,CLKSD_LKSC_ERROR_END_READ, "Can't end read: errcode: %d, errmsg: %s", result, eid_message(result));
         return lk;
     }
 
     result = EidCleanup();
     if (result != EID_OK)
     {
-        g_set_error(error, CLKSD_LKSC_ERROR ,CLKSD_LKSC_ERROR_READ_PORTRAIT, "Can't cleanup: errcode: %d, errmsg: %s", result, eid_message(result));
+        g_set_error(error, CLKSD_LKSC_ERROR ,CLKSD_LKSC_ERROR_CLEANUP, "Can't cleanup: errcode: %d, errmsg: %s", result, eid_message(result));
         return lk;
     }
 
